@@ -1,0 +1,46 @@
+"use client";
+
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
+const sessionKey = "teatime:welcome:v1";
+const duration = 4000;
+
+export default function WelcomeScreen() {
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    let seen = false;
+    try { seen = sessionStorage.getItem(sessionKey) === "seen"; } catch { /* Continue when storage is unavailable. */ }
+    const content = document.getElementById("site-content");
+    const previousOverflow = document.body.style.overflow;
+    if (!seen) {
+      document.body.style.overflow = "hidden";
+      content?.setAttribute("inert", "");
+    }
+    function releasePage() {
+      document.body.style.overflow = previousOverflow;
+      content?.removeAttribute("inert");
+    }
+    const timer = window.setTimeout(() => {
+      try { sessionStorage.setItem(sessionKey, "seen"); } catch { /* Dismiss normally without persistence. */ }
+      releasePage();
+      setVisible(false);
+    }, seen ? 0 : duration);
+    return () => { window.clearTimeout(timer); releasePage(); };
+  }, []);
+
+  if (!visible) return null;
+
+  return (
+    <div className="teatime-welcome fixed inset-0 z-[200] flex min-h-[100svh] flex-col items-center justify-center bg-brand-cream px-6 text-center" role="status" aria-live="polite" aria-label="Welcome to TeaTime">
+      <div aria-hidden="true" className="absolute h-72 w-72 rounded-full border border-brand-red/10 sm:h-96 sm:w-96" />
+      <div className="relative">
+        <Image src="/images/teatime-logo2.png" alt="TeaTime Restaurant" width={200} height={200} loading="eager" className="mx-auto h-40 w-40 object-contain sm:h-48 sm:w-48" />
+        <p className="mt-8 text-4xl font-bold font-heading text-brand-black sm:text-5xl">A moment for TeaTime.</p>
+        <p className="mt-4 text-sm tracking-wide text-brand-gray">Great food. Good moments.</p>
+        <div className="mx-auto mt-8 h-1 w-40 overflow-hidden rounded-full bg-brand-red/10" aria-hidden="true"><div className="teatime-welcome-progress h-full origin-left rounded-full bg-brand-red" /></div>
+      </div>
+    </div>
+  );
+}

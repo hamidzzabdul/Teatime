@@ -1,0 +1,1299 @@
+/* Rewards is an app surface, with its own header and navigation. */
+body:has(.tt-rewards) {
+  background: #f6f7f5;
+}
+body:has(.tt-rewards) #site-content > header,
+body:has(.tt-rewards) #site-content > footer {
+  display: none;
+}
+.tt-rewards {
+  --tt-ink: #252b29;
+  --tt-muted: #7b817c;
+  --tt-line: #e8ebe6;
+  --tt-red: #be3034;
+  background: #f6f7f5;
+  color: var(--tt-ink);
+  min-height: 100dvh;
+  padding: 0;
+}
+.tt-rewards h1,
+.tt-rewards h2,
+.tt-rewards h3 {
+  font-family: var(--font-teatime-body), Arial, sans-serif;
+  letter-spacing: -0.7px;
+}
+.tt-rewards button:focus-visible,
+.tt-rewards a:focus-visible {
+  outline: 3px solid #b82d2c;
+  outline-offset: 4px;
+}
+.tt-rewards .tt-container {
+  max-width: 1040px;
+  padding: 0 30px;
+}
+.tt-appbar {
+  position: sticky;
+  top: 0;
+  z-index: 45;
+  background: #ffffffed;
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--tt-line);
+}
+.tt-appbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 82px;
+  max-width: 1040px;
+  padding: 0 30px;
+  margin: auto;
+}
+.tt-app-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tt-app-brand img {
+  width: 51px;
+  height: 51px;
+  object-fit: contain;
+}
+.tt-app-brand > span {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  letter-spacing: -0.6px;
+}
+.tt-app-brand strong {
+  display: block;
+  font-family: var(--font-teatime-body), Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--tt-muted);
+  margin-top: 2px;
+}
+.tt-appbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.tt-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: #69706a;
+}
+.tt-avatar {
+  width: 41px;
+  height: 41px;
+  border: 3px solid #fff;
+  outline: 1px solid #eadbd4;
+  border-radius: 50%;
+  background: #f5e8e0;
+  color: #985344;
+  font-weight: 750;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+}
+.tt-screen-heading {
+  max-width: 1040px;
+  margin: 28px auto 0;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.tt-screen-heading > span:first-child {
+  display: none;
+}
+.tt-screen-heading h1 {
+  font-size: 24px;
+  font-weight: 750;
+  flex: 1;
+}
+.tt-screen-balance {
+  background: #fff;
+  border: 1px solid var(--tt-line);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 9px 13px;
+  border-radius: 30px;
+  color: #9b403a;
+}
+.tt-rewards[data-screen="home"] .tt-screen-heading {
+  display: none;
+}
+.tt-rewards .tt-tabs {
+  max-width: 980px;
+  margin: 20px auto 24px;
+  padding: 5px;
+  border: 1px solid var(--tt-line);
+  background: #fff;
+  border-radius: 14px;
+  gap: 5px;
+}
+.tt-rewards .tt-tabs button {
+  border-radius: 10px;
+  flex: 1;
+  justify-content: center;
+  min-height: 44px;
+  font-size: 12px;
+  padding: 10px;
+  color: #7b817c;
+}
+.tt-rewards .tt-tabs button.selected {
+  background: #f8ebe8;
+  color: #b63134;
+  font-weight: 750;
+}
+.tt-bottom-nav {
+  display: none;
+}
+.tt-dashboard {
+  margin-top: 34px;
+}
+.tt-dashboard-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.tt-dashboard-welcome .tt-kicker {
+  color: #8a918b;
+  margin-bottom: 8px;
+  font-size: 9px;
+  letter-spacing: 1.7px;
+}
+.tt-dashboard-welcome h1 {
+  font-size: 31px;
+  font-weight: 750;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+.tt-dashboard-welcome h1 > span {
+  color: #c9a25f;
+  font-size: 25px;
+  margin-left: 5px;
+}
+.tt-dashboard-welcome p:last-child {
+  font-size: 12px;
+  color: #858b85;
+  line-height: 1.7;
+}
+.tt-location-pill {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background: #fff;
+  padding: 8px 12px;
+  border: 1px solid var(--tt-line);
+  border-radius: 30px;
+  font-size: 10px;
+  color: #7c827b;
+}
+.tt-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 22px;
+}
+.tt-rewards .tt-membership {
+  transform: none;
+  min-height: 250px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  background: linear-gradient(125deg, #a52a32, #c93d3f);
+  color: #fff;
+  padding: 25px 28px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px #a7373018;
+}
+.tt-membership:before {
+  width: 330px;
+  height: 330px;
+  right: -100px;
+  top: -80px;
+  border: 1px solid #ffffff15;
+}
+.tt-membership:after {
+  width: 330px;
+  height: 330px;
+  right: -165px;
+  top: -10px;
+  border: 1px solid #ffffff15;
+}
+.tt-rewards .tt-card-top > span {
+  font-size: 20px;
+}
+.tt-rewards .tt-card-top svg {
+  width: 26px;
+  opacity: 0.7;
+}
+.tt-rewards .tt-card-sub {
+  font-size: 7px;
+  letter-spacing: 1.6px;
+  opacity: 0.7;
+}
+.tt-rewards .tt-card-points {
+  margin: 24px 0 21px;
+}
+.tt-rewards .tt-card-points small {
+  font-size: 9px;
+  text-transform: none;
+  letter-spacing: 0.6px;
+  opacity: 0.7;
+}
+.tt-rewards .tt-card-points strong {
+  font-family: var(--font-teatime-body), Arial, sans-serif;
+  font-size: 46px;
+  font-weight: 650;
+  line-height: 1;
+  margin: 9px 0;
+  letter-spacing: -2px;
+}
+.tt-rewards .tt-card-points > span {
+  font-size: 10px;
+  opacity: 0.7;
+}
+.tt-rewards .tt-card-bottom {
+  border-top: 1px solid #ffffff23;
+  padding-top: 15px;
+  font-size: 10px;
+  text-transform: none;
+  letter-spacing: 0.2px;
+}
+.tt-member-code {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  border: 0;
+  color: #fff;
+  background: #ffffff17;
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-size: 9px;
+  letter-spacing: 0;
+}
+.tt-next-reward {
+  background: #fff;
+  border: 1px solid var(--tt-line);
+  border-radius: 22px;
+  padding: 25px 27px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tt-next-icon {
+  display: grid;
+  place-items: center;
+  height: 43px;
+  width: 43px;
+  background: #f4eee3;
+  color: #a48549;
+  border-radius: 13px;
+  margin-bottom: 20px;
+}
+.tt-next-reward .tt-kicker {
+  font-size: 8px;
+  letter-spacing: 1.3px;
+  color: #9a9e96;
+  margin-bottom: 9px;
+}
+.tt-next-reward h2 {
+  font-size: 24px;
+  font-weight: 750;
+}
+.tt-next-reward p:not(.tt-kicker) {
+  color: #90958d;
+  font-size: 11px;
+  line-height: 1.7;
+  margin: 8px 0 17px;
+}
+.tt-next-reward progress {
+  display: block;
+  width: 100%;
+  height: 5px;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #ecefe8;
+}
+.tt-next-reward progress::-webkit-progress-bar {
+  background: #ecefe8;
+}
+.tt-next-reward progress::-webkit-progress-value {
+  background: #b73d3e;
+  border-radius: 5px;
+}
+.tt-next-reward progress::-moz-progress-bar {
+  background: #b73d3e;
+}
+.tt-progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #93998f;
+  margin-top: 7px;
+}
+.tt-next-reward .tt-text {
+  align-self: start;
+  font-size: 10px;
+  margin-top: 17px;
+  gap: 12px;
+}
+.tt-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+.tt-shortcuts > button,
+.tt-shortcuts > a {
+  display: grid;
+  grid-template-columns: 38px 1fr 12px;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 3px 12px;
+  text-align: left;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid var(--tt-line);
+  border-radius: 15px;
+}
+.tt-shortcuts > button > span,
+.tt-shortcuts > a > span {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: #f5f5ef;
+  color: #7b8376;
+}
+.tt-shortcuts strong {
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.tt-shortcuts small {
+  color: #92968e;
+  font-size: 9px;
+}
+.tt-shortcuts > button > svg,
+.tt-shortcuts > a > svg {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  color: #b0b5ad;
+}
+.tt-shortcuts b {
+  font-size: 8px;
+  color: #a4383c;
+  background: #f8e8e5;
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+.tt-rewards .tt-section-title {
+  margin: 33px 0 16px;
+  gap: 12px;
+  align-items: center;
+}
+.tt-rewards .tt-section-title .tt-kicker {
+  font-size: 8px;
+  color: #959b91;
+  letter-spacing: 1.4px;
+  margin-bottom: 6px;
+}
+.tt-rewards .tt-section-title h2 {
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 750;
+  letter-spacing: -0.6px;
+}
+.tt-rewards .tt-section-title > a,
+.tt-rewards .tt-section-title > .tt-text {
+  font-size: 10px;
+  color: #a84340;
+}
+.tt-rewards .tt-feature-grid {
+  display: block;
+}
+.tt-rewards:not([data-authenticated="true"]) .tt-feature-grid {
+  display: grid;
+}
+.tt-rewards .tt-spin-preview {
+  min-height: 200px;
+  border: 1px solid #eee5d4;
+  border-radius: 20px;
+  background: #f1ebdc;
+  padding: 27px 30px;
+}
+.tt-rewards .tt-spin-preview .tt-tag {
+  border: 0;
+  padding: 0;
+  letter-spacing: 1.3px;
+  color: #9a8355;
+  font-size: 8px;
+  font-weight: 750;
+}
+.tt-rewards .tt-spin-preview h3 {
+  max-width: 65%;
+  font-size: 26px;
+  line-height: 1.25;
+  margin: 9px 0 9px;
+  font-weight: 750;
+}
+.tt-rewards .tt-spin-preview p {
+  max-width: 65%;
+  font-size: 11px;
+  color: #8b8068;
+  line-height: 1.8;
+}
+.tt-rewards .tt-spin-preview .tt-primary {
+  padding: 10px 15px;
+  min-height: 38px;
+  border-radius: 10px;
+  margin-top: 17px;
+  font-size: 10px;
+  background: #3e5144;
+}
+.tt-rewards .tt-mini-wheel {
+  width: 205px;
+  height: 205px;
+  right: 55px;
+  top: 26px;
+  border: 9px solid #fffaf2;
+  box-shadow: 0 8px 25px #82714c12;
+}
+.tt-rewards .tt-mini-wheel svg {
+  padding: 14px;
+  width: 26px;
+  height: 26px;
+}
+.tt-rewards .tt-reward-grid {
+  gap: 17px;
+}
+.tt-rewards .tt-reward {
+  border: 1px solid var(--tt-line);
+  border-radius: 18px;
+  background: #fff;
+}
+.tt-rewards .tt-reward-art {
+  height: 160px;
+  background: #f1eee8;
+}
+.tt-rewards .tt-reward-body {
+  padding: 19px;
+}
+.tt-rewards .tt-reward-body h3 {
+  font-size: 18px;
+  font-weight: 750;
+  margin: 9px 0 8px;
+}
+.tt-rewards .tt-reward p {
+  font-size: 11px;
+  color: #92978f;
+  line-height: 1.8;
+}
+.tt-rewards .tt-points {
+  display: inline-flex;
+  font-size: 8px;
+  letter-spacing: 0.6px;
+  color: #9e5149;
+  background: #faf0eb;
+  border-radius: 6px;
+  padding: 5px 7px;
+}
+.tt-rewards .tt-panel {
+  border: 1px solid var(--tt-line);
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px;
+}
+.tt-rewards .tt-panel h2 {
+  font-size: 25px;
+  font-weight: 750;
+}
+.tt-rewards .tt-panel h3 {
+  font-size: 19px;
+  font-weight: 700;
+}
+.tt-rewards .tt-primary,
+.tt-rewards .tt-secondary {
+  border-radius: 11px;
+  min-height: 45px;
+  font-size: 12px;
+}
+.tt-rewards input:not([type="checkbox"]),
+.tt-rewards textarea,
+.tt-rewards select {
+  border-color: #e4e8df;
+  background: #fafbf8;
+  border-radius: 10px;
+  min-height: 47px;
+  font-size: 14px;
+}
+.tt-rewards label {
+  font-size: 12px;
+  color: #687060;
+  gap: 8px;
+}
+.tt-rewards .tt-banner,
+.tt-rewards .tt-alert,
+.tt-rewards .tt-success {
+  border-radius: 12px;
+  font-size: 12px;
+  margin: 18px 0;
+}
+.tt-rewards .tt-loading {
+  justify-content: center;
+  color: #92978f;
+  font-size: 12px;
+}
+.tt-app-footer {
+  display: flex;
+  justify-content: center;
+  gap: 23px;
+  align-items: center;
+  padding: 35px 0 26px;
+  color: #a2a69e;
+  font-size: 9px;
+}
+.tt-app-footer a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.tt-rewards .tt-spin-section {
+  margin-top: 24px;
+  min-height: 430px;
+  padding: 40px;
+  border-radius: 24px;
+}
+.tt-rewards .tt-spin-section h2 {
+  font-size: 30px;
+}
+.tt-rewards .tt-odds {
+  max-width: 100%;
+  background: #f8f9f5;
+  border-radius: 13px;
+  padding: 7px 15px;
+  margin: 20px 0;
+}
+.tt-rewards .tt-odds li {
+  font-size: 11px;
+  border-color: #e9ede3;
+  padding: 9px 0;
+}
+.tt-rewards .tt-odds li:last-child {
+  border: 0;
+}
+.tt-rewards .tt-spin-section .tt-kicker {
+  color: #9b8d72;
+}
+.tt-rewards .tt-subheading {
+  font-size: 25px;
+  font-weight: 700;
+}
+.tt-profile-summary {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 28px;
+}
+.tt-profile-initial {
+  background: #efe1d8;
+  color: #ac6855;
+  display: grid;
+  place-items: center;
+  height: 62px;
+  width: 62px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  font-size: 23px;
+  font-weight: 750;
+}
+.tt-profile-summary h2 {
+  font-size: 23px;
+  font-weight: 750;
+}
+.tt-profile-summary p {
+  font-size: 11px;
+  color: #92978f;
+  margin-top: 4px;
+}
+.tt-profile-summary > .tt-text {
+  margin-left: auto;
+}
+.tt-workspace-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 23px;
+}
+.tt-workspace-links button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid var(--tt-line);
+  background: #fff;
+  padding: 17px;
+  border-radius: 14px;
+  text-align: left;
+}
+.tt-workspace-links button > svg:first-child {
+  color: #9d6653;
+}
+.tt-workspace-links button > svg:last-child {
+  margin-left: auto;
+  color: #a7aea0;
+}
+.tt-workspace-links strong {
+  font-size: 12px;
+  display: block;
+}
+.tt-workspace-links small {
+  display: block;
+  color: #969e90;
+  font-size: 10px;
+  margin-top: 4px;
+}
+.tt-rewards .tt-profile-grid {
+  margin-top: 23px;
+}
+.tt-rewards .tt-modal {
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+}
+.tt-rewards .tt-modal h2 {
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.tt-rewards .tt-entry {
+  border-color: var(--tt-line);
+}
+.tt-rewards .tt-stats {
+  gap: 12px;
+  margin-top: 20px;
+}
+.tt-rewards .tt-stats .tt-panel {
+  padding: 20px;
+  border-radius: 15px;
+}
+.tt-rewards .tt-stats strong {
+  font-size: 27px;
+  letter-spacing: -1px;
+}
+.tt-rewards .tt-hero {
+  margin: 28px 0 15px;
+  padding: 20px 0;
+  gap: 35px;
+}
+.tt-rewards .tt-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -1.8px;
+}
+.tt-rewards .tt-hero h1 em {
+  font-family: Georgia, serif;
+  font-size: 46px;
+  font-weight: 400;
+}
+.tt-rewards .tt-hero .tt-membership {
+  min-height: 260px;
+}
+.tt-rewards .tt-how {
+  border-color: var(--tt-line);
+  background: #fff;
+}
+.tt-rewards .tt-how h3 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .tt-rewards {
+    padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+  }
+  .tt-rewards .tt-container {
+    padding: 0 20px;
+    max-width: 600px;
+  }
+  .tt-appbar-inner {
+    height: 72px;
+    padding: 0 20px;
+    max-width: 600px;
+  }
+  .tt-app-brand img {
+    width: 43px;
+    height: 43px;
+  }
+  .tt-app-brand > span {
+    font-size: 22px;
+  }
+  .tt-app-brand strong {
+    font-size: 7px;
+    letter-spacing: 1.6px;
+  }
+  .tt-appbar-right {
+    gap: 13px;
+  }
+  .tt-menu-link {
+    font-size: 0;
+  }
+  .tt-menu-link svg {
+    width: 19px;
+    height: 19px;
+    color: #92978d;
+  }
+  .tt-avatar {
+    width: 37px;
+    height: 37px;
+    font-size: 12px;
+  }
+  .tt-screen-heading {
+    max-width: 600px;
+    padding: 0 20px;
+    margin: 25px auto 20px;
+  }
+  .tt-screen-heading h1 {
+    font-size: 27px;
+    font-weight: 750;
+  }
+  .tt-screen-balance {
+    font-size: 10px;
+    padding: 8px 11px;
+  }
+  .tt-rewards .tt-tabs {
+    display: none;
+  }
+  .tt-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 60;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    background: #fffffff5;
+    backdrop-filter: blur(20px);
+    border-top: 1px solid #e8ebe5;
+    padding: 7px max(10px, env(safe-area-inset-right, 0px))
+      calc(8px + env(safe-area-inset-bottom, 0px))
+      max(10px, env(safe-area-inset-left, 0px));
+    box-shadow: 0 -6px 30px #25312505;
+  }
+  .tt-bottom-nav button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-width: 0;
+    min-height: 55px;
+    border: 0;
+    background: none;
+    color: #9ba197;
+    font-size: 9px;
+    font-weight: 500;
+  }
+  .tt-bottom-nav button > .tt-nav-icon {
+    display: grid;
+    place-items: center;
+    height: 30px;
+    width: 46px;
+    border-radius: 12px;
+  }
+  .tt-bottom-nav button.selected {
+    color: #b52f35;
+    font-weight: 750;
+  }
+  .tt-bottom-nav button.selected > .tt-nav-icon {
+    background: #f9eae7;
+  }
+  .tt-bottom-nav button[data-destination="spin"] > .tt-nav-icon {
+    height: 43px;
+    width: 43px;
+    background: #bd3338;
+    color: #fff;
+    border-radius: 15px;
+    margin-top: -15px;
+    box-shadow: 0 5px 12px #bb343528;
+    border: 4px solid #fff;
+    box-sizing: content-box;
+  }
+  .tt-bottom-nav button[data-destination="spin"].selected > .tt-nav-icon {
+    background: #a5272d;
+  }
+  .tt-dashboard {
+    margin-top: 25px;
+  }
+  .tt-dashboard-welcome {
+    margin-bottom: 20px;
+    align-items: start;
+  }
+  .tt-dashboard-welcome h1 {
+    font-size: 29px;
+    margin-bottom: 6px;
+  }
+  .tt-dashboard-welcome .tt-kicker {
+    font-size: 8px;
+    letter-spacing: 1.4px;
+  }
+  .tt-dashboard-welcome p:last-child {
+    max-width: 270px;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+  .tt-location-pill {
+    display: none;
+  }
+  .tt-dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .tt-rewards .tt-membership {
+    padding: 23px 24px 19px;
+    min-height: 230px;
+    border-radius: 21px;
+  }
+  .tt-rewards .tt-card-top > span {
+    font-size: 19px;
+  }
+  .tt-rewards .tt-card-points {
+    margin: 22px 0 20px;
+  }
+  .tt-rewards .tt-card-points strong {
+    font-size: 43px;
+  }
+  .tt-rewards .tt-card-bottom {
+    padding-top: 12px;
+  }
+  .tt-next-reward {
+    padding: 18px 19px;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0 10px;
+  }
+  .tt-next-icon {
+    display: none;
+  }
+  .tt-next-reward .tt-kicker {
+    grid-column: 1;
+    font-size: 7px;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+  .tt-next-reward h2 {
+    grid-column: 1;
+    font-size: 18px;
+  }
+  .tt-next-reward p:not(.tt-kicker) {
+    grid-column: 1 / span 2;
+    font-size: 10px;
+    margin: 5px 0 12px;
+  }
+  .tt-next-reward progress,
+  .tt-progress-label {
+    grid-column: 1 / span 2;
+  }
+  .tt-next-reward .tt-text {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    margin: 0;
+    align-self: center;
+    font-size: 0;
+    padding: 9px;
+    border-radius: 50%;
+    background: #f6eee7;
+  }
+  .tt-next-reward .tt-text svg {
+    width: 16px;
+    height: 16px;
+  }
+  .tt-shortcuts {
+    gap: 9px;
+    margin-top: 14px;
+  }
+  .tt-shortcuts > button,
+  .tt-shortcuts > a {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 5px 12px;
+    border-radius: 15px;
+    text-align: center;
+  }
+  .tt-shortcuts > button > span,
+  .tt-shortcuts > a > span {
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
+    background: #f5f5ef;
+  }
+  .tt-shortcuts strong {
+    font-size: 9px;
+    white-space: nowrap;
+  }
+  .tt-shortcuts small,
+  .tt-shortcuts > button > svg,
+  .tt-shortcuts > a > svg {
+    display: none;
+  }
+  .tt-shortcuts b {
+    font-size: 7px;
+  }
+  .tt-rewards .tt-section-title {
+    margin: 27px 0 14px;
+  }
+  .tt-rewards .tt-section-title h2 {
+    font-size: 19px;
+    letter-spacing: -0.6px;
+  }
+  .tt-rewards .tt-section-title .tt-kicker {
+    font-size: 7px;
+    letter-spacing: 1.1px;
+    margin-bottom: 6px;
+  }
+  .tt-rewards .tt-section-title > a,
+  .tt-rewards .tt-section-title > .tt-text {
+    font-size: 9px;
+    white-space: nowrap;
+    max-width: none;
+  }
+  .tt-rewards .tt-feature-grid {
+    display: block;
+  }
+  .tt-rewards .tt-spin-preview {
+    min-height: 205px;
+    padding: 22px;
+    border-radius: 18px;
+  }
+  .tt-rewards .tt-spin-preview h3 {
+    font-size: 22px;
+    max-width: 65%;
+    margin: 9px 0 8px;
+  }
+  .tt-rewards .tt-spin-preview p {
+    max-width: 65%;
+    font-size: 10px;
+    line-height: 1.8;
+  }
+  .tt-rewards .tt-spin-preview .tt-primary {
+    min-height: 36px;
+    font-size: 10px;
+    margin-top: 15px;
+    padding: 9px 14px;
+  }
+  .tt-rewards .tt-mini-wheel {
+    width: 145px;
+    height: 145px;
+    right: -24px;
+    top: 43px;
+    border-width: 7px;
+  }
+  .tt-rewards .tt-mini-wheel svg {
+    width: 22px;
+    height: 22px;
+    padding: 11px;
+  }
+  .tt-rewards .tt-reward-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .tt-rewards[data-screen="home"] .tt-reward-grid {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 0 10px;
+    scrollbar-width: none;
+    margin-right: -20px;
+    padding-right: 20px;
+  }
+  .tt-rewards[data-screen="home"] .tt-reward {
+    display: block;
+    flex: 0 0 65%;
+    min-width: 0;
+    scroll-snap-align: start;
+    border-radius: 16px;
+  }
+  .tt-rewards[data-screen="home"] .tt-reward-art {
+    height: 135px;
+    min-height: 0;
+  }
+  .tt-rewards[data-screen="home"] .tt-reward-body {
+    padding: 15px;
+  }
+  .tt-rewards .tt-reward-body h3 {
+    font-size: 16px;
+    letter-spacing: -0.4px;
+  }
+  .tt-rewards .tt-reward-body p {
+    font-size: 10px;
+    line-height: 1.7;
+  }
+  .tt-rewards .tt-reward {
+    display: grid;
+    grid-template-columns: 87px 1fr;
+    border-radius: 16px;
+  }
+  .tt-rewards .tt-reward-art {
+    height: 100%;
+    min-height: 150px;
+  }
+  .tt-rewards .tt-reward-art:before {
+    width: 65px;
+    height: 65px;
+  }
+  .tt-rewards .tt-reward-art svg {
+    width: 33px;
+  }
+  .tt-rewards .tt-reward-body {
+    padding: 17px;
+  }
+  .tt-rewards .tt-points {
+    font-size: 7px;
+    padding: 4px 6px;
+  }
+  .tt-rewards .tt-panel {
+    padding: 21px;
+    border-radius: 18px;
+  }
+  .tt-rewards .tt-panel h2 {
+    font-size: 23px;
+  }
+  .tt-rewards .tt-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .tt-rewards .tt-profile-grid .tt-panel {
+    min-width: 0;
+  }
+  .tt-rewards .tt-voucher-grid {
+    grid-template-columns: 1fr;
+  }
+  .tt-rewards .tt-spin-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    margin-top: 0;
+    gap: 10px;
+    padding: 24px 20px;
+  }
+  .tt-rewards .tt-spin-section > div:first-child {
+    display: contents;
+  }
+  .tt-rewards .tt-spin-section .tt-kicker {
+    order: 0;
+    align-self: center;
+    font-size: 8px;
+    margin: 0;
+  }
+  .tt-rewards .tt-spin-section h2 {
+    order: 1;
+    text-align: center;
+    font-size: 25px;
+    margin: 3px 0 0;
+  }
+  .tt-rewards
+    .tt-spin-section
+    > div:first-child
+    > p:not(.tt-kicker):not(.tt-fine):not(.tt-result) {
+    order: 2;
+    text-align: center;
+    color: #93998d;
+    font-size: 10px;
+    max-width: 240px;
+    margin: 0;
+  }
+  .tt-rewards .tt-wheel-wrap {
+    order: 3;
+    width: min(270px, 74vw);
+    height: min(270px, 74vw);
+    margin: 24px auto 14px;
+  }
+  .tt-rewards .tt-spin-section .tt-primary {
+    order: 4;
+    width: 100%;
+    min-height: 48px;
+    font-size: 13px;
+    border-radius: 13px;
+  }
+  .tt-rewards .tt-spin-section .tt-result {
+    order: 5;
+    width: 100%;
+    text-align: center;
+    margin: 4px 0;
+    font-size: 12px;
+    padding: 14px;
+    border-radius: 10px;
+    background: #f7efe3;
+  }
+  .tt-rewards .tt-spin-section .tt-fine {
+    order: 7;
+    text-align: center;
+    font-size: 9px !important;
+    margin: 0;
+  }
+  .tt-rewards .tt-odds {
+    order: 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 15px;
+    width: 100%;
+    padding: 8px 14px;
+    margin: 7px 0;
+  }
+  .tt-rewards .tt-odds li {
+    font-size: 9px;
+  }
+  .tt-rewards .tt-wheel > span {
+    font-size: 10px;
+  }
+  .tt-rewards .tt-wheel-hub {
+    padding: 16px;
+  }
+  .tt-rewards .tt-spin-section .tt-wheel > span {
+    transform-origin: 40px 10px;
+  }
+  .tt-profile-summary {
+    margin-top: 0;
+    gap: 12px;
+  }
+  .tt-profile-summary h2 {
+    font-size: 20px;
+  }
+  .tt-profile-summary p {
+    font-size: 10px;
+  }
+  .tt-profile-summary > .tt-text {
+    font-size: 10px;
+  }
+  .tt-profile-initial {
+    height: 54px;
+    width: 54px;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .tt-workspace-links {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .tt-rewards .tt-banner {
+    font-size: 10px;
+    line-height: 1.8;
+    padding: 14px 16px;
+  }
+  .tt-rewards .tt-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .tt-rewards .tt-stats .tt-panel {
+    padding: 17px;
+  }
+  .tt-rewards .tt-stats small {
+    font-size: 9px;
+  }
+  .tt-rewards .tt-stats strong {
+    font-size: 23px;
+  }
+  .tt-rewards .tt-reward-grid > .tt-panel {
+    display: block;
+  }
+  .tt-rewards .tt-entry .tt-actions {
+    width: auto;
+  }
+  .tt-rewards .tt-entry {
+    min-width: 0;
+  }
+  .tt-app-footer {
+    padding: 28px 0 17px;
+    gap: 15px;
+    font-size: 8px;
+    flex-wrap: wrap;
+  }
+  .tt-rewards .tt-hero {
+    grid-template-columns: 1fr;
+    margin: 20px 0;
+    padding: 0;
+    gap: 23px;
+  }
+  .tt-rewards .tt-hero h1 {
+    font-size: 33px;
+    line-height: 1.2;
+  }
+  .tt-rewards .tt-hero h1 em {
+    font-size: 38px;
+  }
+  .tt-rewards .tt-hero .tt-kicker {
+    font-size: 8px;
+  }
+  .tt-rewards .tt-hero .tt-intro {
+    font-size: 12px;
+  }
+  .tt-rewards .tt-hero .tt-membership {
+    min-height: 220px;
+  }
+  .tt-rewards .tt-benefits {
+    font-size: 8px;
+    gap: 10px;
+  }
+  .tt-rewards .tt-how {
+    margin-top: 16px;
+    padding: 23px;
+  }
+  .tt-rewards .tt-modal-backdrop {
+    padding: 12px;
+    align-items: end;
+    z-index: 100;
+  }
+  .tt-rewards .tt-modal {
+    max-width: 550px;
+    max-height: 90dvh;
+    padding: 28px 23px calc(25px + env(safe-area-inset-bottom, 0px));
+    border-radius: 24px 24px 18px 18px;
+  }
+  .tt-rewards .tt-modal h2 {
+    font-size: 27px;
+  }
+  .tt-rewards input:not([type="checkbox"]),
+  .tt-rewards textarea,
+  .tt-rewards select {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .tt-rewards[data-screen="home"] .tt-tabs {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 360px) {
+  .tt-rewards .tt-container {
+    padding: 0 15px;
+  }
+  .tt-rewards .tt-shortcuts strong {
+    font-size: 8px;
+  }
+  .tt-rewards .tt-spin-preview h3 {
+    font-size: 20px;
+  }
+  .tt-rewards .tt-section-title h2 {
+    font-size: 17px;
+  }
+  .tt-rewards .tt-screen-heading {
+    padding: 0 15px;
+  }
+}

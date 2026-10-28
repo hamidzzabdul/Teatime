@@ -1,0 +1,11 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import sharp from 'sharp';
+const menu=JSON.parse(await readFile('src/data/menu-final.json','utf8'));
+await mkdir('public/icons',{recursive:true});
+for(const size of [192,512])await sharp('public/images/teatime-icon.png').resize(size,size,{fit:'contain',background:'#faf7f2'}).png().toFile(`public/icons/app-${size}.png`);
+await writeFile('public/offline-menu.json',JSON.stringify({savedAt:new Date().toISOString(),categories:menu.categories,items:menu.items.map(({id,name,category,description,price,variants})=>({id,name,category,description,price,variants}))}));
+const template=await readFile('scripts/sw-template.js','utf8');
+const version=createHash('sha256').update(template).update(await readFile('public/offline-app.js')).update(await readFile('public/offline.html')).update(await readFile('public/offline-menu.json')).digest('hex').slice(0,16);
+await writeFile('public/sw.js',template.replace('__VERSION__',version));
+console.log(`Prepared TeaTime app icons and offline snapshot: ${menu.items.length} dishes.`);

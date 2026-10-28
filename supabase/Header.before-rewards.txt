@@ -1,0 +1,165 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+import SectionLink from "@/components/layout/SectionLink";
+
+const navigation = [
+  { name: "Home", href: "/" },
+  { name: "Menu", href: "/menu" },
+  { name: "About", href: "/#about" },
+  { name: "Contact", href: "/contact" },
+];
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const pathname = usePathname();
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const panelContentRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const panel = panelRef.current;
+    const content = panelContentRef.current;
+    if (!panel || !content) return;
+    const updateHeight = () => {
+      panel.style.height = isMenuOpen ? `${content.scrollHeight}px` : "0px";
+    };
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    const observer = typeof ResizeObserver !== "undefined" ? new ResizeObserver(updateHeight) : undefined;
+    observer?.observe(content);
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+      observer?.disconnect();
+    };
+  }, [isMenuOpen]);
+  useEffect(() => {
+    function handleKey(event: KeyboardEvent) {
+      if (event.key === "Escape" && isMenuOpen) { setIsMenuOpen(false); toggleRef.current?.focus(); }
+    }
+    document.addEventListener("keydown", handleKey);
+    return () => document.removeEventListener("keydown", handleKey);
+  }, [isMenuOpen]);
+
+  function closeMenu() {
+    setIsMenuOpen(false);
+  }
+
+  return (
+    <header className="sticky top-0 z-50 border-b border-black/10 bg-white/95 shadow-sm backdrop-blur-md">
+      <div className="container-custom flex h-24 items-center justify-between">
+        {/* Logo */}
+        <Link
+          href="/"
+          onClick={closeMenu}
+          className="relative z-50 flex h-24 w-28 shrink-0 items-center justify-center overflow-hidden"
+          aria-label="TeaTime homepage"
+        >
+          <Image
+            src="/images/teatime-logo2.png"
+            alt="TeaTime Restaurant"
+            width={623}
+            height={623}
+            loading="eager"
+            className="h-full w-full scale-[1.35] object-contain"
+          />
+        </Link>
+
+        {/* Desktop navigation */}
+        <nav
+          className="hidden items-center gap-8 lg:flex xl:gap-12"
+          aria-label="Main navigation"
+        >
+          {navigation.map((item) => (
+            <SectionLink
+              key={item.name}
+              href={item.href}
+              aria-current={item.href === pathname ? "page" : undefined}
+              className="group relative px-2 py-3 text-[15px] font-bold text-brand-black transition-colors duration-300 hover:text-brand-red"
+            >
+              {item.name}
+
+              {/* Animated underline */}
+              <span className="absolute bottom-1 left-2 right-2 h-0.5 origin-left scale-x-0 rounded-full bg-brand-red transition-transform duration-300 group-hover:scale-x-100" />
+            </SectionLink>
+          ))}
+        </nav>
+
+        {/* Desktop menu button */}
+        <div className="hidden lg:block">
+          <SectionLink
+            href="/menu"
+            className="group inline-flex items-center justify-center rounded-full bg-brand-red px-7 py-3.5 text-sm font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-brand-red-dark hover:shadow-xl"
+          >
+            View Menu
+            <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </SectionLink>
+        </div>
+
+        {/* Mobile menu button */}
+        <button
+          type="button"
+          ref={toggleRef}
+          aria-controls="mobile-navigation"
+          onClick={() => setIsMenuOpen((current) => !current)}
+          className="relative z-50 inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand-black text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-brand-red lg:hidden"
+          aria-label={
+            isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
+          aria-expanded={isMenuOpen}
+        >
+          <Menu size={22} aria-hidden="true" className={`absolute transition-all duration-300 motion-reduce:transition-none ${isMenuOpen ? "rotate-90 scale-50 opacity-0" : "rotate-0 scale-100 opacity-100"}`} />
+          <X size={22} aria-hidden="true" className={`absolute transition-all duration-300 motion-reduce:transition-none ${isMenuOpen ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-50 opacity-0"}`} />
+        </button>
+      </div>
+
+      {/* Mobile navigation */}
+      <div
+        ref={panelRef}
+        id="mobile-navigation"
+        inert={!isMenuOpen}
+        className="mobile-navigation-panel border-t bg-white lg:hidden"
+        aria-hidden={!isMenuOpen}
+        data-open={isMenuOpen}
+      >
+        <div ref={panelContentRef} className="overflow-hidden">
+        <nav
+          className="container-custom flex flex-col py-5"
+          aria-label="Mobile navigation"
+        >
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              onClick={closeMenu}
+              aria-current={item.href === pathname ? "page" : undefined}
+              className="group flex items-center justify-between border-b border-black/10 px-2 py-4 text-base font-bold text-brand-black transition-all duration-300 hover:bg-brand-cream hover:px-4 hover:text-brand-red"
+            >
+              {item.name}
+
+              <span className="translate-x-2 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                →
+              </span>
+            </Link>
+          ))}
+
+          <Link
+            href="/menu"
+            onClick={closeMenu}
+            style={{ color: "#ffffff" }}
+            className="mt-6 inline-flex items-center justify-center rounded-full bg-brand-red px-7 py-4 font-bold shadow-md transition-all duration-300 hover:bg-brand-red-dark hover:shadow-lg"
+          >
+            View Our Menu
+          </Link>
+        </nav>
+        </div>
+      </div>
+    </header>
+  );
+}

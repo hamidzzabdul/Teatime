@@ -1,0 +1,7 @@
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { House, UtensilsCrossed, Gift, MapPin, Smartphone, WifiOff, RefreshCw } from "lucide-react";
+import { useWebApp } from "./WebAppProvider";
+const items = [{ href: '/', label: 'Home', Icon: House }, { href: '/menu', label: 'Menu', Icon: UtensilsCrossed }, { href: '/rewards', label: 'Rewards', Icon: Gift }, { href: '/contact', label: 'Visit', Icon: MapPin }, { href: '/app', label: 'App', Icon: Smartphone }];
+export default function WebAppChrome() { const path = usePathname().replace(/\/$/, '') || '/'; const { online, updateReady, update } = useWebApp(); return <><div className="webapp-state" data-rewards={path === '/rewards'}>{!online && <div className="app-network-banner" role="status"><WifiOff size={16}/><span>You’re offline. <a href="/offline.html">Open the saved menu</a>. Connect for accounts, points and rewards.</span></div>}{updateReady && <div className="app-update-banner" role="status"><RefreshCw size={15}/><span>An app update is ready.</span><button onClick={update}>Update & reload</button></div>}</div><nav className="app-primary-nav" aria-label="App navigation">{items.map(({ href, label, Icon }) => { const active = href === '/' ? path === '/' : path === href || path.startsWith(href + '/'); return <Link key={href} href={href} aria-current={active ? 'page' : undefined}><span><Icon size={21} strokeWidth={active ? 2.2 : 1.7}/></span>{label}</Link>; })}</nav></>; }

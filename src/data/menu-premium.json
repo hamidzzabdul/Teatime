@@ -1,0 +1,2201 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "fileName": "Menu Premium.pdf",
+    "brand": "TeaTime Premium",
+    "market": "Qatar",
+    "totalPages": 48,
+    "status": "Reference extraction; Nairobi availability not confirmed"
+  },
+  "notes": [
+    "English item names and descriptions were checked against the rendered PDF pages. Descriptions are lightly normalized for spelling, punctuation and casing without adding ingredients.",
+    "Blank descriptions indicate that no English ingredient description was supplied. Ingredients have not been inferred from photographs or item names.",
+    "All image fields are null, ready for real dish photographs to be added later.",
+    "The PDF heading Vegan Salad includes chicken, shrimp, salmon, steak and dairy dishes. The extracted category is named Salads and no dietary labels are inferred.",
+    "The Impossible Burger description in the source explicitly includes beef. The name has not been interpreted as a plant-based claim.",
+    "Unusual source wording such as Freeze lettuce, Taislaw, Fajitha and Kuwaithy is retained for owner review. sourceName preserves changed item spellings.",
+    "The source groups Corn Flakes and Oats under Hot Drink. That grouping is retained pending owner review.",
+    "Source page numbers are one-based PDF page numbers, including covers and photo-only pages."
+  ],
+  "categories": [
+    {
+      "id": "tea-pots",
+      "name": "Tea Pots",
+      "sourcePages": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "club-sandwiches",
+      "name": "Club Sandwiches",
+      "sourcePages": [
+        6
+      ]
+    },
+    {
+      "id": "fries-specials",
+      "name": "Fries Specials",
+      "sourcePages": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "wrap-sandwiches",
+      "name": "Wrap Sandwiches",
+      "sourcePages": [
+        9
+      ]
+    },
+    {
+      "id": "paratha-rolls",
+      "name": "Paratha Rolls",
+      "sourcePages": [
+        9
+      ]
+    },
+    {
+      "id": "tapas",
+      "name": "Tapas",
+      "sourcePages": [
+        10,
+        11
+      ]
+    },
+    {
+      "id": "kids-meals",
+      "name": "Kids Meals",
+      "sourcePages": [
+        12
+      ]
+    },
+    {
+      "id": "granola",
+      "name": "Granola",
+      "sourcePages": [
+        13
+      ]
+    },
+    {
+      "id": "burgers",
+      "name": "Burgers",
+      "sourcePages": [
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "id": "sliders",
+      "name": "Sliders",
+      "sourcePages": [
+        18,
+        19
+      ]
+    },
+    {
+      "id": "salads",
+      "name": "Salads",
+      "sourcePages": [
+        20,
+        21,
+        22
+      ],
+      "sourceName": "Vegan Salad"
+    },
+    {
+      "id": "pasta-specials",
+      "name": "Pasta Specials",
+      "sourcePages": [
+        24,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "id": "tacos",
+      "name": "Tacos",
+      "sourcePages": [
+        28
+      ]
+    },
+    {
+      "id": "oats-meals",
+      "name": "Oats Meals",
+      "sourcePages": [
+        29
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "sourcePages": [
+        31,
+        32,
+        33
+      ]
+    },
+    {
+      "id": "cookies",
+      "name": "Cookies",
+      "sourcePages": [
+        32
+      ]
+    },
+    {
+      "id": "mojitos",
+      "name": "Mojitos",
+      "sourcePages": [
+        34
+      ],
+      "options": [
+        {
+          "id": "base",
+          "name": "Base",
+          "values": [
+            "7UP",
+            "Energy drink"
+          ],
+          "note": "Shared options shown beside the standard Mojito list; confirm applicability before enabling ordering."
+        }
+      ]
+    },
+    {
+      "id": "fresh-fruit-mojitos",
+      "name": "Fresh Fruit Mojitos",
+      "sourcePages": [
+        35
+      ]
+    },
+    {
+      "id": "smoothies",
+      "name": "Smoothies",
+      "sourcePages": [
+        36,
+        37
+      ]
+    },
+    {
+      "id": "premium-juices",
+      "name": "Premium Juices",
+      "sourcePages": [
+        37
+      ]
+    },
+    {
+      "id": "mocktails",
+      "name": "Mocktails",
+      "sourcePages": [
+        38,
+        39
+      ]
+    },
+    {
+      "id": "juices",
+      "name": "Juices",
+      "sourcePages": [
+        40,
+        41
+      ]
+    },
+    {
+      "id": "water-and-soft-drinks",
+      "name": "Water & Soft Drinks",
+      "sourcePages": [
+        40
+      ]
+    },
+    {
+      "id": "lattes",
+      "name": "Lattes",
+      "sourcePages": [
+        43
+      ]
+    },
+    {
+      "id": "shakes",
+      "name": "Shakes",
+      "sourcePages": [
+        37,
+        43
+      ]
+    },
+    {
+      "id": "hot-drinks",
+      "name": "Hot Drinks",
+      "sourcePages": [
+        44,
+        45
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "black-tea-pot",
+      "name": "Black Tea Pot",
+      "category": "tea-pots",
+      "description": "Serves 3 glasses of black tea.",
+      "image": null,
+      "sourcePage": 4
+    },
+    {
+      "id": "karak-tea-pot",
+      "name": "Karak Tea Pot",
+      "category": "tea-pots",
+      "description": "Serves 3 glasses of Karak tea.",
+      "image": null,
+      "sourcePage": 5
+    },
+    {
+      "id": "tuna-melt",
+      "name": "Tuna Melt",
+      "category": "club-sandwiches",
+      "description": "White bread, mayo tuna mix with vegetables, lettuce and tomato.",
+      "image": null,
+      "sourcePage": 6
+    },
+    {
+      "id": "mixed-club-sandwich",
+      "name": "Mixed Club Sandwich",
+      "category": "club-sandwiches",
+      "description": "White bread, pulled chicken, fried egg, sliced cheese, tomato, lettuce and sauce.",
+      "image": null,
+      "sourcePage": 6
+    },
+    {
+      "id": "egg-cheese-club",
+      "name": "Egg Cheese Club",
+      "category": "club-sandwiches",
+      "description": "White bread, fried egg, lettuce, tomato and hot sauce.",
+      "image": null,
+      "sourcePage": 6
+    },
+    {
+      "id": "pulled-chicken-club",
+      "name": "Pulled Chicken Club",
+      "category": "club-sandwiches",
+      "description": "Pulled chicken, tomatoes, lettuce, cheese slice, sauce, white bread and fries.",
+      "image": null,
+      "sourcePage": 6
+    },
+    {
+      "id": "patty-melt",
+      "name": "Patty Melt",
+      "category": "club-sandwiches",
+      "description": "Toast bread, fresh beef patty, pickles, caramelized onion, American cheese and spicy wedges.",
+      "image": null,
+      "sourcePage": 6
+    },
+    {
+      "id": "angus-rib-eye-sandwich",
+      "name": "Angus Rib Eye Sandwich",
+      "category": "club-sandwiches",
+      "description": "Sliced bread, roasted rib eye beef, truffle mayo and aioli sauce.",
+      "image": null,
+      "sourcePage": 6,
+      "sourceName": "ANGUS REB EYE SANDWICH"
+    },
+    {
+      "id": "new-winter",
+      "name": "New Winter",
+      "category": "club-sandwiches",
+      "description": "Sliced bread, fried chicken, Fire House sauce and coleslaw.",
+      "image": null,
+      "sourcePage": 6
+    },
+    {
+      "id": "loaded-fries",
+      "name": "Loaded Fries",
+      "category": "fries-specials",
+      "description": "Monterey Jack, cheddar, jalapeño, crispy fried onion and homemade special sauce.",
+      "image": null,
+      "sourcePage": 7
+    },
+    {
+      "id": "cheese-loaded-fries",
+      "name": "Cheese Loaded Fries",
+      "category": "fries-specials",
+      "description": "Fries, mozzarella cheese, fried chicken and cheese sauce.",
+      "image": null,
+      "sourcePage": 7
+    },
+    {
+      "id": "cheese-nachos-bites",
+      "name": "Cheese Nachos Bites",
+      "category": "fries-specials",
+      "description": "Fried corn tortilla, chilli con beef carne, jalapeño, crispy fried onion, chipotle ranch sauce and sour cream on the side.",
+      "image": null,
+      "sourcePage": 7
+    },
+    {
+      "id": "nachos-guacamole",
+      "name": "Nachos Guacamole",
+      "category": "fries-specials",
+      "description": "Corn nachos, guacamole, sour cream, jalapeño and onion.",
+      "image": null,
+      "sourcePage": 7
+    },
+    {
+      "id": "regular-fries",
+      "name": "Regular Fries",
+      "category": "fries-specials",
+      "description": "",
+      "image": null,
+      "sourcePage": 8
+    },
+    {
+      "id": "cheesy-volcano-fries",
+      "name": "Cheesy Volcano Fries",
+      "category": "fries-specials",
+      "description": "Fries, mozzarella cheese, fried chicken, cheese sauce, dynamite sauce and Cheetos.",
+      "image": null,
+      "sourcePage": 8
+    },
+    {
+      "id": "dynamite-fries",
+      "name": "Dynamite Fries",
+      "category": "fries-specials",
+      "description": "Fries, cheddar cheese, fusion sauce, beef, jalapeño and fried onion.",
+      "image": null,
+      "sourcePage": 8
+    },
+    {
+      "id": "lucky-fries",
+      "name": "Lucky Fries",
+      "category": "fries-specials",
+      "description": "Monterey Jack, cheddar, jalapeño, crispy fried onion, chicken in buffalo sauce and homemade special sauce.",
+      "image": null,
+      "sourcePage": 8
+    },
+    {
+      "id": "spicy-wedges-with-chimichurri-sauce",
+      "name": "Spicy Wedges with Chimichurri Sauce",
+      "category": "fries-specials",
+      "description": "Spicy wedges, garlic, parsley and chimichurri sauce.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "truffle-shoestring-fries",
+      "name": "Truffle Shoestring Fries",
+      "category": "fries-specials",
+      "description": "Shoestring fries, garlic, parsley and truffle oil.",
+      "image": null,
+      "sourcePage": 9,
+      "sourceName": "TRUFFLLE SHROOSTRING FRIES"
+    },
+    {
+      "id": "egg-tortilla-wrap",
+      "name": "Egg Tortilla Wrap",
+      "category": "wrap-sandwiches",
+      "description": "Egg, vegetable mix, mayonnaise and iceberg lettuce.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "falafel-wrap-roll",
+      "name": "Falafel Wrap Roll",
+      "category": "wrap-sandwiches",
+      "description": "Hummus, falafel, eggplant, pomegranate, red cabbage and vegan sauce.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "hash-brown-burrito",
+      "name": "Hash Brown Burrito",
+      "category": "wrap-sandwiches",
+      "description": "Egg, sausage, hash brown, cheese, avocado and grilled onion.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "beef-wrap-combo",
+      "name": "Beef Wrap Combo",
+      "category": "wrap-sandwiches",
+      "description": "Chilli beef, tomato, lettuce and special sauce.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "shrimps-wrap-combo",
+      "name": "Shrimps Wrap Combo",
+      "category": "wrap-sandwiches",
+      "description": "Shrimp, special sauce and lettuce.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "vegan-wrap-roll",
+      "name": "Vegan Wrap Roll",
+      "category": "wrap-sandwiches",
+      "description": "Vegan patty, iceberg lettuce, avocado slices and vegan sauce.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "chicken-wrap-roll",
+      "name": "Chicken Wrap Roll",
+      "category": "wrap-sandwiches",
+      "description": "Fresh fried chicken, cheese, coleslaw, iceberg lettuce, special sauce and fries.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "chicken-wrap-combo",
+      "name": "Chicken Wrap Combo",
+      "category": "wrap-sandwiches",
+      "description": "Fresh fried chicken, special sauce and lettuce.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "paratha-grilled-chicken-combo",
+      "name": "Paratha Grilled Chicken Combo",
+      "category": "paratha-rolls",
+      "description": "Fresh paratha, grilled chicken, lettuce, French fries and special sauce.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "creamy-cheese-egg-roll",
+      "name": "Creamy Cheese Egg Roll",
+      "category": "paratha-rolls",
+      "description": "Fresh paratha, cream cheese, fried egg and lettuce.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "paratha-falafel-combo",
+      "name": "Paratha Falafel Combo",
+      "category": "paratha-rolls",
+      "description": "Fresh paratha, homemade falafel, tomato, cucumber, lettuce, fries and white sauce.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "paratha-chicken-combo",
+      "name": "Paratha Chicken Combo",
+      "category": "paratha-rolls",
+      "description": "Fresh paratha, crispy fried chicken, coleslaw, French fries and special sauce.",
+      "image": null,
+      "sourcePage": 9
+    },
+    {
+      "id": "buffalo-shrimp",
+      "name": "Buffalo Shrimp",
+      "category": "tapas",
+      "description": "Sticky buffalo shrimp with cool ranch sauce.",
+      "image": null,
+      "sourcePage": 10
+    },
+    {
+      "id": "sriracha-honey-shrimp",
+      "name": "Sriracha Honey Shrimp",
+      "category": "tapas",
+      "description": "8 pieces of crumbed shrimp with lemon and honey sriracha sauce.",
+      "image": null,
+      "sourcePage": 10
+    },
+    {
+      "id": "chicken-poppers",
+      "name": "Chicken Poppers",
+      "category": "tapas",
+      "description": "20 pieces of fresh chicken, ketchup, mayo, special sauce and fries.",
+      "image": null,
+      "sourcePage": 10
+    },
+    {
+      "id": "shrimp-fajitha-plate",
+      "name": "Shrimp Fajitha Plate",
+      "category": "tapas",
+      "description": "Grilled shrimp, mixed bell peppers and white onion, with pita bread.",
+      "image": null,
+      "sourcePage": 10
+    },
+    {
+      "id": "tenderloin-steak-au-poivre",
+      "name": "Tenderloin Steak au Poivre",
+      "category": "tapas",
+      "description": "Angus beef tenderloin with creamy mushroom sauce.",
+      "image": null,
+      "sourcePage": 10
+    },
+    {
+      "id": "rock-shrimp",
+      "name": "Rock Shrimp",
+      "category": "tapas",
+      "description": "Tempura crispy fried shrimp with togarashi aioli.",
+      "image": null,
+      "sourcePage": 11
+    },
+    {
+      "id": "hummus-with-pesto-chicken",
+      "name": "Hummus with Pesto Chicken",
+      "category": "tapas",
+      "description": "Creamy hummus and fresh herb-marinated chicken, served with fresh paratha.",
+      "image": null,
+      "sourcePage": 11
+    },
+    {
+      "id": "shrimp-popcorn",
+      "name": "Shrimp Popcorn",
+      "category": "tapas",
+      "description": "Crispy shrimp, fries, ketchup, mayo and dynamite sauce.",
+      "image": null,
+      "sourcePage": 11
+    },
+    {
+      "id": "rostico",
+      "name": "Rostico",
+      "category": "tapas",
+      "description": "Crispy potato rostico served with special sauce.",
+      "image": null,
+      "sourcePage": 11
+    },
+    {
+      "id": "shrimp-combo-meal",
+      "name": "Shrimp Combo Meal",
+      "category": "tapas",
+      "description": "10 pieces of crispy fried shrimp, fries, potato slider bun, dynamite sauce and soft drinks.",
+      "image": null,
+      "sourcePage": 11
+    },
+    {
+      "id": "nano-burger",
+      "name": "Nano Burger",
+      "category": "kids-meals",
+      "description": "4 pieces of fresh beef nano, 4 pieces of fresh chicken nano, 4 pieces of nuggets, fries and kids sauces.",
+      "image": null,
+      "sourcePage": 12
+    },
+    {
+      "id": "kid-s-rabbit",
+      "name": "Kid's Rabbit",
+      "category": "kids-meals",
+      "description": "Kids pancake with caramel sauce, strawberry, blueberry and banana.",
+      "image": null,
+      "sourcePage": 12
+    },
+    {
+      "id": "nuggets",
+      "name": "Nuggets",
+      "category": "kids-meals",
+      "description": "6 pieces.",
+      "image": null,
+      "sourcePage": 12
+    },
+    {
+      "id": "pancake-tacos",
+      "name": "Pancake Tacos",
+      "category": "kids-meals",
+      "description": "3 pancakes, Nutella, pistachio, Biscoff, strawberry, peach, blueberry and whipped cream.",
+      "image": null,
+      "sourcePage": 12
+    },
+    {
+      "id": "mango-berries-yogurt-bowl",
+      "name": "Mango Berries Yogurt Bowl",
+      "category": "granola",
+      "description": "Plant-based yogurt with mango, honey, homemade natural granola, kiwi, dragon fruit, pomegranate and passion fruit.",
+      "image": null,
+      "sourcePage": 13
+    },
+    {
+      "id": "peanut-butter-berry-granola",
+      "name": "Peanut Butter Berry Granola",
+      "category": "granola",
+      "description": "Plant-based yogurt, homemade natural granola, banana, berries, peanut butter, pumpkin seed and almond flakes.",
+      "image": null,
+      "sourcePage": 13
+    },
+    {
+      "id": "summer-berries-parfait-smoothie-bowl",
+      "name": "Summer Berries Parfait Smoothie Bowl",
+      "category": "granola",
+      "description": "Plant-based yogurt with fresh berries, homemade natural granola and almond flakes.",
+      "image": null,
+      "sourcePage": 13,
+      "sourceName": "SUMMER BERRIES PARFAIT SMOOTHI BOWL"
+    },
+    {
+      "id": "classic-granola",
+      "name": "Classic Granola",
+      "category": "granola",
+      "description": "Greek yogurt, maple syrup, homemade granola, fresh strawberry, fresh blackberry, banana, almond and walnuts.",
+      "image": null,
+      "sourcePage": 13
+    },
+    {
+      "id": "papaya-granola",
+      "name": "Papaya Granola",
+      "category": "granola",
+      "description": "Papaya, homemade granola, vanilla ice cream and mixed fruits.",
+      "image": null,
+      "sourcePage": 13
+    },
+    {
+      "id": "caravan-burger-double-patty",
+      "name": "Caravan Burger Double Patty",
+      "category": "burgers",
+      "description": "Fresh double meat patty, homemade sesame beetroot bun, onion strings, American cheese, pickles and French fries with Caravan sauce.",
+      "image": null,
+      "sourcePage": 14
+    },
+    {
+      "id": "fresh-grilled-burger",
+      "name": "Fresh Grilled Burger",
+      "category": "burgers",
+      "description": "Homemade sesame bun, fresh beef patty, American cheese, grilled chilli, grilled mushroom, special sauce and fries.",
+      "image": null,
+      "sourcePage": 14
+    },
+    {
+      "id": "crispy-chicken-burger",
+      "name": "Crispy Chicken Burger",
+      "category": "burgers",
+      "description": "Homemade milky bun, fresh fried chicken, white cheddar cheese, fries, pickles, special sauce and coleslaw.",
+      "image": null,
+      "sourcePage": 14
+    },
+    {
+      "id": "home-run-burger",
+      "name": "Home Run Burger",
+      "category": "burgers",
+      "description": "Homemade sesame bun, fresh crispy chicken, pickles, iceberg lettuce, special sauce and fries.",
+      "image": null,
+      "sourcePage": 14
+    },
+    {
+      "id": "classic-burger-2018",
+      "name": "Classic Burger 2018",
+      "category": "burgers",
+      "description": "Homemade sesame bun, homemade fresh beef patty, American cheese, white onion and fries.",
+      "image": null,
+      "sourcePage": 14
+    },
+    {
+      "id": "black-diamond-burger",
+      "name": "Black Diamond Burger",
+      "category": "burgers",
+      "description": "Homemade black bun, breaded fried chicken, coleslaw salad, French fries and special sauce.",
+      "image": null,
+      "sourcePage": 15
+    },
+    {
+      "id": "signature-loop",
+      "name": "Signature Loop",
+      "category": "burgers",
+      "description": "Homemade doughnut, special sauce, cheese sauce, pickles, crispy fried chicken and fries.",
+      "image": null,
+      "sourcePage": 15
+    },
+    {
+      "id": "double-cheese-burger",
+      "name": "Double Cheese Burger",
+      "category": "burgers",
+      "description": "Homemade sesame bun, homemade special sauce, white onion, fresh double patty, double American cheese, fried bacon and fries.",
+      "image": null,
+      "sourcePage": 15
+    },
+    {
+      "id": "cheesy-steak-burger",
+      "name": "Cheesy Steak Burger",
+      "category": "burgers",
+      "description": "Home-baked bun, fresh beef patty, Philly beef steak, provolone cheese, mushroom, onion, bell peppers, special sauce and fries.",
+      "image": null,
+      "sourcePage": 15
+    },
+    {
+      "id": "messi-burger",
+      "name": "Messi Burger",
+      "category": "burgers",
+      "description": "Homemade bun, fresh beef patty, white cheddar cheese, iceberg lettuce, grilled onion, jalapeño, special sauce, bacon and fries.",
+      "image": null,
+      "sourcePage": 16
+    },
+    {
+      "id": "hot-dragon-burger",
+      "name": "Hot Dragon Burger",
+      "category": "burgers",
+      "description": "Homemade sesame bun, crispy fried chicken, cheese sauce, special sauce and fries.",
+      "image": null,
+      "sourcePage": 16
+    },
+    {
+      "id": "the-frenchie-burger",
+      "name": "The Frenchie Burger",
+      "category": "burgers",
+      "description": "Croissant, crispy chicken and honey pepper sauce.",
+      "image": null,
+      "sourcePage": 16
+    },
+    {
+      "id": "premium-signature",
+      "name": "Premium Signature",
+      "category": "burgers",
+      "description": "Home-baked bun, fresh beef patty, Swiss Gruyere cheese, caramelized onion and black pepper cream.",
+      "image": null,
+      "sourcePage": 16
+    },
+    {
+      "id": "two-char-grilled-burger",
+      "name": "Two Char Grilled Burger",
+      "category": "burgers",
+      "description": "Home-baked bun, double patty, double American cheese, Swiss cheese, white onion, tomato, lettuce and West Coast sauce.",
+      "image": null,
+      "sourcePage": 16
+    },
+    {
+      "id": "sriracha-honey-burger",
+      "name": "Sriracha Honey Burger",
+      "category": "burgers",
+      "description": "Home-baked bun, crispy fried chicken, American cheese, Taislaw, sriracha honey sauce and fries.",
+      "image": null,
+      "sourcePage": 17
+    },
+    {
+      "id": "impossible-burger",
+      "name": "Impossible Burger",
+      "category": "burgers",
+      "description": "Home-baked bun, fresh double beef patty, double American cheese, ketchup, mustard, pickles and fries.",
+      "image": null,
+      "sourcePage": 17
+    },
+    {
+      "id": "mushroom-swiss-burger",
+      "name": "Mushroom Swiss Burger",
+      "category": "burgers",
+      "description": "Home-baked bun, fresh double beef patty, double Swiss cheese, mushroom, West Coast sauce and fries.",
+      "image": null,
+      "sourcePage": 17
+    },
+    {
+      "id": "the-pounder",
+      "name": "The Pounder",
+      "category": "burgers",
+      "description": "Home-baked bun, double fresh beef patty, double American cheese, pickles, white onion, Caravan sauce, sriracha and fries.",
+      "image": null,
+      "sourcePage": 17
+    },
+    {
+      "id": "truffle-steak-slider",
+      "name": "Truffle Steak Slider",
+      "category": "sliders",
+      "description": "2 pieces. Tenderloin steak, mushroom, onion, truffle mayo sauce and spicy wedges.",
+      "image": null,
+      "sourcePage": 18
+    },
+    {
+      "id": "red-dragon",
+      "name": "Red Dragon",
+      "category": "sliders",
+      "description": "2 pieces. Homemade beetroot bun, fresh fried chicken, chimichurri sauce, lollo bionda lettuce and fried jalapeño.",
+      "image": null,
+      "sourcePage": 19
+    },
+    {
+      "id": "classic-slider",
+      "name": "Classic Slider",
+      "category": "sliders",
+      "description": "2 pieces. Homemade potato slider bun, fresh fried chicken, pickles, iceberg lettuce, cheese and mustard mayo.",
+      "image": null,
+      "sourcePage": 19
+    },
+    {
+      "id": "classic-slider-and-westcoast-slider",
+      "name": "Classic Slider and Westcoast Slider",
+      "category": "sliders",
+      "description": "Homemade potato sliders, fried chicken, fresh beef patty, pickles, iceberg lettuce, mustard mayo, West Coast sauce and American cheese.",
+      "image": null,
+      "sourcePage": 19
+    },
+    {
+      "id": "machine-gun-slider",
+      "name": "Machine Gun Slider",
+      "category": "sliders",
+      "description": "2 slider pieces, fresh beef patty, American cheese, chipotle mayo sauce, grilled bacon, soft fried jalapeño and grilled mushroom.",
+      "image": null,
+      "sourcePage": 19
+    },
+    {
+      "id": "grilled-pineapple-salad",
+      "name": "Grilled Pineapple Salad",
+      "category": "salads",
+      "description": "Grilled pineapple, avocado, red bell pepper and homemade vegan dressing.",
+      "image": null,
+      "sourcePage": 20
+    },
+    {
+      "id": "mediterranean-salad",
+      "name": "Mediterranean Salad",
+      "category": "salads",
+      "description": "Roasted sweet potato, kale, quinoa, pomegranate, pumpkin seed and homemade vegan dressing.",
+      "image": null,
+      "sourcePage": 20
+    },
+    {
+      "id": "shrimp-caesar-salad",
+      "name": "Shrimp Caesar Salad",
+      "category": "salads",
+      "description": "Romaine lettuce, croutons, parmesan cheese, Caesar dressing and grilled shrimp.",
+      "image": null,
+      "sourcePage": 20
+    },
+    {
+      "id": "grilled-halloumi-quinoa-salad",
+      "name": "Grilled Halloumi Quinoa Salad",
+      "category": "salads",
+      "description": "Freeze lettuce, grilled halloumi, radicchio, arugula, quinoa and lemon thyme dressing.",
+      "image": null,
+      "sourcePage": 20
+    },
+    {
+      "id": "north-western-salad",
+      "name": "North Western Salad",
+      "category": "salads",
+      "description": "Homemade roasted chicken, homemade dressing, romaine lettuce, red cabbage, avocado, black beans and white onion.",
+      "image": null,
+      "sourcePage": 21
+    },
+    {
+      "id": "rainbow-salad",
+      "name": "Rainbow Salad",
+      "category": "salads",
+      "description": "Romaine lettuce, carrot, red cabbage, white cabbage, roasted chicken, roasted almond, pomegranate seed and green dressing.",
+      "image": null,
+      "sourcePage": 21
+    },
+    {
+      "id": "earthy-caesar",
+      "name": "Earthy Caesar",
+      "category": "salads",
+      "description": "Romaine lettuce, grilled chicken, freeze lettuce, red and white cabbage, homemade croutons and parmesan cheese.",
+      "image": null,
+      "sourcePage": 21
+    },
+    {
+      "id": "fresh-cut-with-honey-lemon-dressing",
+      "name": "Fresh Cut with Honey Lemon Dressing",
+      "category": "salads",
+      "description": "Strawberry, mango, banana, blueberry and dressing.",
+      "image": null,
+      "sourcePage": 21
+    },
+    {
+      "id": "grilled-salmon-salad",
+      "name": "Grilled Salmon Salad",
+      "category": "salads",
+      "description": "Avocado, lettuce, cucumber, quinoa, strawberry, mango, Italian arugula, honey mustard dressing and grilled salmon.",
+      "image": null,
+      "sourcePage": 22
+    },
+    {
+      "id": "italian-salad",
+      "name": "Italian Salad",
+      "category": "salads",
+      "description": "Mini mozzarella cheese, pine nuts, olive oil, basil and balsamic vinegar.",
+      "image": null,
+      "sourcePage": 22
+    },
+    {
+      "id": "rocket-steak-salad",
+      "name": "Rocket Steak Salad",
+      "category": "salads",
+      "description": "Italian arugula, red cabbage, white cabbage, rib eye steak and olive-based dressing.",
+      "image": null,
+      "sourcePage": 22
+    },
+    {
+      "id": "creamy-tuscan-sausage",
+      "name": "Creamy Tuscan Sausage",
+      "category": "pasta-specials",
+      "description": "Italian beef sausage, cherry tomato, baby spinach, parmesan cheese, spaghetti pasta and cream sauce.",
+      "image": null,
+      "sourcePage": 24
+    },
+    {
+      "id": "grilled-chicken-penne-pasta",
+      "name": "Grilled Chicken Penne Pasta",
+      "category": "pasta-specials",
+      "description": "Butter pink sauce, grilled chicken, onion, Italian seasoning and parmesan cheese.",
+      "image": null,
+      "sourcePage": 24
+    },
+    {
+      "id": "salmon-rigatoni",
+      "name": "Salmon Rigatoni",
+      "category": "pasta-specials",
+      "description": "Fresh grilled salmon, cherry tomato, baby spinach, parmesan cream sauce and rigatoni pasta.",
+      "image": null,
+      "sourcePage": 24,
+      "sourceName": "SALMON RIGOTONI"
+    },
+    {
+      "id": "italian-chicken-pasta",
+      "name": "Italian Chicken Pasta",
+      "category": "pasta-specials",
+      "description": "Penne pasta, white sauce, grilled chicken and chilli flakes.",
+      "image": null,
+      "sourcePage": 24
+    },
+    {
+      "id": "vegan-pasta",
+      "name": "Vegan Pasta",
+      "category": "pasta-specials",
+      "description": "Homemade vegan pasta sauce, organic wholegrain penne pasta and mushroom.",
+      "image": null,
+      "sourcePage": 24
+    },
+    {
+      "id": "chicken-alfredo-pasta",
+      "name": "Chicken Alfredo Pasta",
+      "category": "pasta-specials",
+      "description": "Pasta sauce, cream, white onion, mushroom and grilled chicken.",
+      "image": null,
+      "sourcePage": 25
+    },
+    {
+      "id": "spicy-roasted-chicken-pasta",
+      "name": "Spicy Roasted Chicken Pasta",
+      "category": "pasta-specials",
+      "description": "Penne pasta, roasted chicken, spicy sauce, parmesan cheese, cream and chilli flakes.",
+      "image": null,
+      "sourcePage": 25
+    },
+    {
+      "id": "mac-cheese-shrimp-pasta",
+      "name": "Mac & Cheese Shrimp Pasta",
+      "category": "pasta-specials",
+      "description": "Cream cheese, cheddar cheese, mozzarella cheese and crumbed fried shrimp.",
+      "image": null,
+      "sourcePage": 25
+    },
+    {
+      "id": "mixed-sauce-pasta",
+      "name": "Mixed Sauce Pasta",
+      "category": "pasta-specials",
+      "description": "White sauce, grilled chicken, pink sauce, green capsicum, white onion, mushroom and penne pasta.",
+      "image": null,
+      "sourcePage": 25
+    },
+    {
+      "id": "beef-rigatoni-pasta",
+      "name": "Beef Rigatoni Pasta",
+      "category": "pasta-specials",
+      "description": "Red pasta sauce, rigatoni, ground beef, spinach, beef sujuk, fresh cream and parmesan cheese.",
+      "image": null,
+      "sourcePage": 26
+    },
+    {
+      "id": "creamy-cheesy-gnocchi",
+      "name": "Creamy Cheesy Gnocchi",
+      "category": "pasta-specials",
+      "description": "Gnocchi pasta, mozzarella cheese, parmesan cheese, red sauce and cream.",
+      "image": null,
+      "sourcePage": 26
+    },
+    {
+      "id": "pasta-with-burrata",
+      "name": "Pasta with Burrata",
+      "category": "pasta-specials",
+      "description": "Red sauce, cream, macaroni pasta, onion and burrata cheese.",
+      "image": null,
+      "sourcePage": 26
+    },
+    {
+      "id": "premium-veg-pasta",
+      "name": "Premium Veg Pasta",
+      "category": "pasta-specials",
+      "description": "Cherry tomato, bell peppers, broccoli, onion, mushroom, red pasta sauce and penne pasta.",
+      "image": null,
+      "sourcePage": 26
+    },
+    {
+      "id": "truffle-linguine",
+      "name": "Truffle Linguine",
+      "category": "pasta-specials",
+      "description": "Truffle parmesan sauce, spaghetti pasta and Black Diamond truffle mushroom.",
+      "image": null,
+      "sourcePage": 27
+    },
+    {
+      "id": "spicy-rigatoni",
+      "name": "Spicy Rigatoni",
+      "category": "pasta-specials",
+      "description": "Parmesan cheese, rigatoni pasta, sausage and spicy creamy sauce.",
+      "image": null,
+      "sourcePage": 27
+    },
+    {
+      "id": "crusta-ocean-linguine",
+      "name": "Crusta Ocean Linguine",
+      "category": "pasta-specials",
+      "description": "Red sauce, spaghetti pasta and chipotle-marinated seafood.",
+      "image": null,
+      "sourcePage": 27
+    },
+    {
+      "id": "cajun-chicken-alfredo",
+      "name": "Cajun Chicken Alfredo",
+      "category": "pasta-specials",
+      "description": "Spaghetti pasta, cream sauce, Cajun-seasoned chicken, parmesan cheese and cherry tomato.",
+      "image": null,
+      "sourcePage": 27
+    },
+    {
+      "id": "penne-chicken-cheese-pasta",
+      "name": "Penne Chicken Cheese Pasta",
+      "category": "pasta-specials",
+      "description": "White cheese pasta sauce, broccoli, chicken, garlic, onion, brown penne pasta and cream.",
+      "image": null,
+      "sourcePage": 27
+    },
+    {
+      "id": "spicy-chicken-tacos",
+      "name": "Spicy Chicken Tacos",
+      "category": "tacos",
+      "description": "Spicy grilled chicken, lettuce and spicy mayo.",
+      "image": null,
+      "sourcePage": 28
+    },
+    {
+      "id": "grilled-shrimp-tacos",
+      "name": "Grilled Shrimp Tacos",
+      "category": "tacos",
+      "description": "Grilled shrimp and mango avocado salsa.",
+      "image": null,
+      "sourcePage": 28
+    },
+    {
+      "id": "chicken-fajitha-tacos",
+      "name": "Chicken Fajitha Tacos",
+      "category": "tacos",
+      "description": "Fajita chicken, fajita mango sauce and feta.",
+      "image": null,
+      "sourcePage": 28
+    },
+    {
+      "id": "granola-bowl",
+      "name": "Granola Bowl",
+      "category": "oats-meals",
+      "description": "Greek yogurt, maple syrup, green apple, kiwi, banana, blueberry and strawberry.",
+      "image": null,
+      "sourcePage": 29
+    },
+    {
+      "id": "biscoff-overnight-oats",
+      "name": "Biscoff Overnight Oats",
+      "category": "oats-meals",
+      "description": "Almond milk, overnight oats, Biscoff cream and pistachio.",
+      "image": null,
+      "sourcePage": 29
+    },
+    {
+      "id": "pb-j-overnight-oats",
+      "name": "PB+J Overnight Oats",
+      "category": "oats-meals",
+      "description": "Almond milk, oats, Greek yogurt, flaxseed, honey and fresh berries.",
+      "image": null,
+      "sourcePage": 29
+    },
+    {
+      "id": "mango-strawberry-oat-meal",
+      "name": "Mango Strawberry Oat Meal",
+      "category": "oats-meals",
+      "description": "Almond milk, oats, maple syrup, mango, strawberry and peanut butter.",
+      "image": null,
+      "sourcePage": 29
+    },
+    {
+      "id": "overnight-oats-bowl",
+      "name": "Overnight Oats Bowl",
+      "category": "oats-meals",
+      "description": "Almond milk, peanut butter, overnight oats, honey, strawberry, banana, blueberry, chia seed and chocolate chips.",
+      "image": null,
+      "sourcePage": 29
+    },
+    {
+      "id": "peppino-berry",
+      "name": "Peppino Berry",
+      "category": "desserts",
+      "description": "Strawberry puree, vanilla ice cream and strawberry yogurt.",
+      "image": null,
+      "sourcePage": 31
+    },
+    {
+      "id": "magic-box",
+      "name": "Magic Box",
+      "category": "desserts",
+      "description": "Caramelized banana, caramel sauce and ice cream with cotton candy.",
+      "image": null,
+      "sourcePage": 31
+    },
+    {
+      "id": "premium-french-toast",
+      "name": "Premium French Toast",
+      "category": "desserts",
+      "description": "Brioche bread, strawberry, blackberry, Nutella, ice cream and saffron sauce.",
+      "image": null,
+      "sourcePage": 31
+    },
+    {
+      "id": "french-toast-pistachio",
+      "name": "French Toast Pistachio",
+      "category": "desserts",
+      "description": "Brioche bread toast, mixed berries and pistachio sauce.",
+      "image": null,
+      "sourcePage": 31
+    },
+    {
+      "id": "hot-chocolate-fudge",
+      "name": "Hot Chocolate Fudge",
+      "category": "desserts",
+      "description": "Chocolate and vanilla ice cream, hot chocolate sauce and matching dry nuts.",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "pancake-popcorn",
+      "name": "Pancake Popcorn",
+      "category": "desserts",
+      "description": "15 pieces of nano pancakes, pistachio, Nutella, Biscoff sauce and caramel.",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "banana-chocolate-croissant",
+      "name": "Banana Chocolate Croissant",
+      "category": "desserts",
+      "description": "",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "dates-cream-punch",
+      "name": "Dates Cream Punch",
+      "category": "desserts",
+      "description": "",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "mango-passion",
+      "name": "Mango Passion",
+      "category": "desserts",
+      "description": "",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "saffron-cake",
+      "name": "Saffron Cake",
+      "category": "desserts",
+      "description": "",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "mahalabia",
+      "name": "Mahalabia",
+      "category": "desserts",
+      "description": "",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "lotus",
+      "name": "Lotus",
+      "category": "desserts",
+      "description": "",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "the-teenage-craze",
+      "name": "The Teenage Craze",
+      "category": "desserts",
+      "description": "Vanilla ice cream, chocolate ice cream, sponge and Bourbon biscuit.",
+      "image": null,
+      "sourcePage": 33
+    },
+    {
+      "id": "rose-falooda",
+      "name": "Rose Falooda",
+      "category": "desserts",
+      "description": "Vanilla ice cream, rose milk, pistachio and mixed fruit.",
+      "image": null,
+      "sourcePage": 33
+    },
+    {
+      "id": "corn-boy",
+      "name": "Corn Boy",
+      "category": "desserts",
+      "description": "Vanilla ice cream and strawberry ice cream.",
+      "image": null,
+      "sourcePage": 33
+    },
+    {
+      "id": "brown-spider",
+      "name": "Brown Spider",
+      "category": "desserts",
+      "description": "Chocolate ice cream, vanilla ice cream, brownie cake and caramel sauce.",
+      "image": null,
+      "sourcePage": 33
+    },
+    {
+      "id": "snow-rock-falooda",
+      "name": "Snow Rock Falooda",
+      "category": "desserts",
+      "description": "Mango ice cream, vanilla ice cream, mixed fresh fruit and dry fruits.",
+      "image": null,
+      "sourcePage": 33
+    },
+    {
+      "id": "peanut-cookies",
+      "name": "Peanut Cookies",
+      "category": "cookies",
+      "description": "Home-baked natural cookies. 1 piece.",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "almond-cookies",
+      "name": "Almond Cookies",
+      "category": "cookies",
+      "description": "Home-baked natural cookies. 1 piece.",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "cashew-nut-cookies",
+      "name": "Cashew Nut Cookies",
+      "category": "cookies",
+      "description": "Home-baked natural cookies. 1 piece.",
+      "image": null,
+      "sourcePage": 32,
+      "sourceName": "CASHEW NUT"
+    },
+    {
+      "id": "chocochip-cookies",
+      "name": "Chocochip Cookies",
+      "category": "cookies",
+      "description": "Home-baked natural cookies. 1 piece.",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "red-velvet-cookies",
+      "name": "Red Velvet Cookies",
+      "category": "cookies",
+      "description": "Home-baked natural cookies. 1 piece.",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "pistachio-cookies",
+      "name": "Pistachio Cookies",
+      "category": "cookies",
+      "description": "Home-baked natural cookies. 1 piece.",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "granola-cookies",
+      "name": "Granola Cookies",
+      "category": "cookies",
+      "description": "Home-baked natural cookies. 1 piece.",
+      "image": null,
+      "sourcePage": 32
+    },
+    {
+      "id": "blackberry-mojito",
+      "name": "Blackberry Mojito",
+      "category": "mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 34
+    },
+    {
+      "id": "peach-mojito",
+      "name": "Peach Mojito",
+      "category": "mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 34
+    },
+    {
+      "id": "lemon-mojito",
+      "name": "Lemon Mojito",
+      "category": "mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 34
+    },
+    {
+      "id": "strawberry-mojito",
+      "name": "Strawberry Mojito",
+      "category": "mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 34
+    },
+    {
+      "id": "cherry-mojito",
+      "name": "Cherry Mojito",
+      "category": "mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 34
+    },
+    {
+      "id": "pomegranate-mojito",
+      "name": "Pomegranate Mojito",
+      "category": "mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 34
+    },
+    {
+      "id": "blueberry-mojito",
+      "name": "Blueberry Mojito",
+      "category": "mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 34
+    },
+    {
+      "id": "passion-fruit-mojito",
+      "name": "Passion Fruit Mojito",
+      "category": "mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 34
+    },
+    {
+      "id": "watermelon-mojito",
+      "name": "Watermelon Mojito",
+      "category": "mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 34
+    },
+    {
+      "id": "raspberry-mojito",
+      "name": "Raspberry Mojito",
+      "category": "mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 34
+    },
+    {
+      "id": "lychee-raspberry-mojito",
+      "name": "Lychee Raspberry Mojito",
+      "category": "mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 34,
+      "sourceName": "LYCHEE RASBERRY MOJITO"
+    },
+    {
+      "id": "fresh-strawberry-mojito",
+      "name": "Fresh Strawberry Mojito",
+      "category": "fresh-fruit-mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 35
+    },
+    {
+      "id": "mixed-fresh-mojito",
+      "name": "Mixed Fresh Mojito",
+      "category": "fresh-fruit-mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 35
+    },
+    {
+      "id": "black-strawberry-mojito",
+      "name": "Black Strawberry Mojito",
+      "category": "fresh-fruit-mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 35
+    },
+    {
+      "id": "fresh-passion-fruit-mojito",
+      "name": "Fresh Passion Fruit Mojito",
+      "category": "fresh-fruit-mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 35
+    },
+    {
+      "id": "fresh-dragon-mojito",
+      "name": "Fresh Dragon Mojito",
+      "category": "fresh-fruit-mojitos",
+      "description": "",
+      "image": null,
+      "sourcePage": 35
+    },
+    {
+      "id": "pink-peach-smoothie",
+      "name": "Pink Peach Smoothie",
+      "category": "smoothies",
+      "description": "Peach, strawberry, Greek yogurt and almond milk.",
+      "image": null,
+      "sourcePage": 36
+    },
+    {
+      "id": "banana-dates-smoothie",
+      "name": "Banana Dates Smoothie",
+      "category": "smoothies",
+      "description": "Banana, dates and almond milk.",
+      "image": null,
+      "sourcePage": 36
+    },
+    {
+      "id": "apple-dates-smoothie",
+      "name": "Apple Dates Smoothie",
+      "category": "smoothies",
+      "description": "",
+      "image": null,
+      "sourcePage": 36
+    },
+    {
+      "id": "mango-granola-smoothie",
+      "name": "Mango Granola Smoothie",
+      "category": "smoothies",
+      "description": "Non-dairy milk, banana, mango, ginger, blueberry and granola.",
+      "image": null,
+      "sourcePage": 36
+    },
+    {
+      "id": "premium-fuel-smoothie",
+      "name": "Premium Fuel Smoothie",
+      "category": "smoothies",
+      "description": "Mango, strawberry, banana and grapes.",
+      "image": null,
+      "sourcePage": 36
+    },
+    {
+      "id": "banana-mango-smoothie",
+      "name": "Banana Mango Smoothie",
+      "category": "smoothies",
+      "description": "Banana, mango, plant-based Greek yogurt and honey.",
+      "image": null,
+      "sourcePage": 36
+    },
+    {
+      "id": "banana-walnut-smoothie",
+      "name": "Banana Walnut Smoothie",
+      "category": "smoothies",
+      "description": "",
+      "image": null,
+      "sourcePage": 36
+    },
+    {
+      "id": "avocado-smoothie",
+      "name": "Avocado Smoothie",
+      "category": "smoothies",
+      "description": "Avocado, banana and almond milk.",
+      "image": null,
+      "sourcePage": 36
+    },
+    {
+      "id": "pink-barbie-smoothie",
+      "name": "Pink Barbie Smoothie",
+      "category": "smoothies",
+      "description": "Strawberry, banana, beetroot, almond milk and honey.",
+      "image": null,
+      "sourcePage": 36
+    },
+    {
+      "id": "oats-meal-banana-smoothie",
+      "name": "Oats Meal Banana Smoothie",
+      "category": "smoothies",
+      "description": "Rolled oats, banana, maple syrup, non-dairy milk and peanut butter.",
+      "image": null,
+      "sourcePage": 37,
+      "sourceName": "OAT'S MEAL BANANA SMOOTHIE"
+    },
+    {
+      "id": "cucumber-lemonade",
+      "name": "Cucumber Lemonade",
+      "category": "premium-juices",
+      "description": "Orange, cucumber and Sprite.",
+      "image": null,
+      "sourcePage": 37
+    },
+    {
+      "id": "miracle-red",
+      "name": "Miracle Red",
+      "category": "premium-juices",
+      "description": "Beetroot, carrot, green apple, lemon and ginger.",
+      "image": null,
+      "sourcePage": 37
+    },
+    {
+      "id": "sunny-day",
+      "name": "Sunny Day",
+      "category": "premium-juices",
+      "description": "Orange, carrot and apple.",
+      "image": null,
+      "sourcePage": 37
+    },
+    {
+      "id": "blackberry-ginger-ale",
+      "name": "Blackberry Ginger Ale",
+      "category": "premium-juices",
+      "description": "Fresh blackberry juice, ginger and soda water.",
+      "image": null,
+      "sourcePage": 37
+    },
+    {
+      "id": "pain-killer",
+      "name": "Pain Killer",
+      "category": "premium-juices",
+      "description": "Watermelon, lemon and ginger.",
+      "image": null,
+      "sourcePage": 37
+    },
+    {
+      "id": "watermelon-refresher",
+      "name": "Watermelon Refresher",
+      "category": "premium-juices",
+      "description": "Watermelon, strawberry, lime, plant-based Greek yogurt and maple syrup.",
+      "image": null,
+      "sourcePage": 37
+    },
+    {
+      "id": "premium-super-charger",
+      "name": "Premium Super Charger",
+      "category": "premium-juices",
+      "description": "Fresh orange with fresh turmeric.",
+      "image": null,
+      "sourcePage": 37
+    },
+    {
+      "id": "black-matcha",
+      "name": "Black Matcha",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 38
+    },
+    {
+      "id": "black-punch",
+      "name": "Black Punch",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 38
+    },
+    {
+      "id": "ginger-passion",
+      "name": "Ginger Passion",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 38
+    },
+    {
+      "id": "light-summer",
+      "name": "Light Summer",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 38
+    },
+    {
+      "id": "mint-kiwi-guava-ade",
+      "name": "Mint Kiwi Guava Ade",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 38
+    },
+    {
+      "id": "mango-mint-mocktail",
+      "name": "Mango Mint Mocktail",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 38,
+      "sourceName": "MANGO MINT"
+    },
+    {
+      "id": "tropical-punch-refresher",
+      "name": "Tropical Punch Refresher",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 38,
+      "sourceName": "TROPICAL PUNCH MOCKTAIL REFRESHER"
+    },
+    {
+      "id": "blue-ocean",
+      "name": "Blue Ocean",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 38
+    },
+    {
+      "id": "orange-passion",
+      "name": "Orange Passion",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 39
+    },
+    {
+      "id": "premium-brunch-punch",
+      "name": "Premium Brunch Punch",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 39
+    },
+    {
+      "id": "royal-coconut-blend",
+      "name": "Royal Coconut Blend",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 39
+    },
+    {
+      "id": "watermelon-matcha",
+      "name": "Watermelon Matcha",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 39
+    },
+    {
+      "id": "passion-fruit-matcha",
+      "name": "Passion Fruit Matcha",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 39
+    },
+    {
+      "id": "high-energy-burst",
+      "name": "High Energy Burst",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 39,
+      "sourceName": "HIGH ENERGY BRUST"
+    },
+    {
+      "id": "strawberry-orange-ade",
+      "name": "Strawberry Orange Ade",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 39
+    },
+    {
+      "id": "mango-lychee-sparkling",
+      "name": "Mango Lychee Sparkling",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 39
+    },
+    {
+      "id": "fire-mocktail",
+      "name": "Fire Mocktail",
+      "category": "mocktails",
+      "description": "",
+      "image": null,
+      "sourcePage": 39
+    },
+    {
+      "id": "tropical-fresh-juice",
+      "name": "Tropical Fresh Juice",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "detox-juice",
+      "name": "Detox Juice",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "pomegranate",
+      "name": "Pomegranate",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "mango",
+      "name": "Mango",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "red-mash",
+      "name": "Red Mash",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "annabi",
+      "name": "Annabi",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "banana",
+      "name": "Banana",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 40,
+      "sourceName": "AVACADO"
+    },
+    {
+      "id": "qatari",
+      "name": "Qatari",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "lemon-mint",
+      "name": "Lemon Mint",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 41
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 41
+    },
+    {
+      "id": "awar-qalb",
+      "name": "Awar Qalb",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 41
+    },
+    {
+      "id": "cocktail",
+      "name": "Cocktail",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 41
+    },
+    {
+      "id": "kiwi",
+      "name": "Kiwi",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 41
+    },
+    {
+      "id": "watermelon",
+      "name": "Watermelon",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 41
+    },
+    {
+      "id": "strawberry",
+      "name": "Strawberry",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 41
+    },
+    {
+      "id": "grape",
+      "name": "Grape",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 41
+    },
+    {
+      "id": "pineapple",
+      "name": "Pineapple",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 41
+    },
+    {
+      "id": "green-apple",
+      "name": "Green Apple",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 41
+    },
+    {
+      "id": "watermelon-lemonade",
+      "name": "Watermelon Lemonade",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 41
+    },
+    {
+      "id": "mint-and-orange-blossom",
+      "name": "Mint and Orange Blossom",
+      "category": "juices",
+      "description": "",
+      "image": null,
+      "sourcePage": 41
+    },
+    {
+      "id": "water-rayyan",
+      "name": "Water Rayyan",
+      "category": "water-and-soft-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "soft-drinks",
+      "name": "Soft Drinks",
+      "category": "water-and-soft-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "acqua-dolomia-mineral-water",
+      "name": "Acqua Dolomia Mineral Water",
+      "category": "water-and-soft-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "acqua-dolomia-sparkling-water",
+      "name": "Acqua Dolomia Sparkling Water",
+      "category": "water-and-soft-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "spanish-latte",
+      "name": "Spanish Latte",
+      "category": "lattes",
+      "description": "",
+      "image": null,
+      "sourcePage": 43
+    },
+    {
+      "id": "cocoa-maple-mallow-latte",
+      "name": "Cocoa Maple Mallow Latte",
+      "category": "lattes",
+      "description": "",
+      "image": null,
+      "sourcePage": 43
+    },
+    {
+      "id": "nutella-cream-latte",
+      "name": "Nutella Cream Latte",
+      "category": "lattes",
+      "description": "",
+      "image": null,
+      "sourcePage": 43
+    },
+    {
+      "id": "blackberry-iced-latte",
+      "name": "Blackberry Iced Latte",
+      "category": "lattes",
+      "description": "Fresh blackberry, milk and coffee.",
+      "image": null,
+      "sourcePage": 43
+    },
+    {
+      "id": "banana-caramel-latte",
+      "name": "Banana Caramel Latte",
+      "category": "lattes",
+      "description": "Banana, milk, caramel and coffee.",
+      "image": null,
+      "sourcePage": 43
+    },
+    {
+      "id": "prunes-shake",
+      "name": "Prunes Shake",
+      "category": "shakes",
+      "description": "Vanilla ice cream, dried prunes and milk.",
+      "image": null,
+      "sourcePage": 37
+    },
+    {
+      "id": "biscoff-shake",
+      "name": "Biscoff Shake",
+      "category": "shakes",
+      "description": "Milk, Biscoff sauce and ice cream.",
+      "image": null,
+      "sourcePage": 43
+    },
+    {
+      "id": "nutella-shake",
+      "name": "Nutella Shake",
+      "category": "shakes",
+      "description": "Milk, Nutella and ice cream.",
+      "image": null,
+      "sourcePage": 43
+    },
+    {
+      "id": "crazy-chocolate-caramel",
+      "name": "Crazy Chocolate Caramel",
+      "category": "shakes",
+      "description": "",
+      "image": null,
+      "sourcePage": 43,
+      "sourceName": "CRAZY CHOCLATE CARAMEL"
+    },
+    {
+      "id": "teatime-karak-tea",
+      "name": "TeaTime Karak Tea",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 44
+    },
+    {
+      "id": "french-cappuccino",
+      "name": "French Cappuccino",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45
+    },
+    {
+      "id": "espresso",
+      "name": "Espresso",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45
+    },
+    {
+      "id": "qahwa-arabi",
+      "name": "Qahwa Arabi",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45
+    },
+    {
+      "id": "coffee-latte",
+      "name": "Coffee Latte",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45
+    },
+    {
+      "id": "turkish-coffee",
+      "name": "Turkish Coffee",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45,
+      "sizes": [
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    },
+    {
+      "id": "hot-chocolate",
+      "name": "Hot Chocolate",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45
+    },
+    {
+      "id": "sahlab",
+      "name": "Sahlab",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45
+    },
+    {
+      "id": "kuwaithy-coffee",
+      "name": "Kuwaithy Coffee",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45
+    },
+    {
+      "id": "shai-hamra",
+      "name": "Shai Hamra",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45,
+      "sizes": [
+        "Small",
+        "Large"
+      ]
+    },
+    {
+      "id": "coffee-toffee",
+      "name": "Coffee Toffee",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45
+    },
+    {
+      "id": "fresh-milk-with-ginger",
+      "name": "Fresh Milk with Ginger",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45,
+      "sourceName": "FRESH MILK W/ GINGER"
+    },
+    {
+      "id": "tea-with-saffron",
+      "name": "Tea with Saffron",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45,
+      "sizes": [
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    },
+    {
+      "id": "green-tea",
+      "name": "Green Tea",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45,
+      "sizes": [
+        "Medium",
+        "Large"
+      ]
+    },
+    {
+      "id": "hot-mocha",
+      "name": "Hot Mocha",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45
+    },
+    {
+      "id": "black-tea",
+      "name": "Black Tea",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45,
+      "sizes": [
+        "Medium",
+        "Large"
+      ]
+    },
+    {
+      "id": "corn-flakes",
+      "name": "Corn Flakes",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45,
+      "sizes": [
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    },
+    {
+      "id": "fresh-milk-nescafe",
+      "name": "Fresh Milk Nescafe",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45,
+      "sizes": [
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    },
+    {
+      "id": "fresh-milk-with-saffron",
+      "name": "Fresh Milk with Saffron",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45,
+      "sourceName": "FRESH MILK W/ SAFFRON"
+    },
+    {
+      "id": "oats",
+      "name": "Oats",
+      "category": "hot-drinks",
+      "description": "",
+      "image": null,
+      "sourcePage": 45,
+      "sizes": [
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    }
+  ]
+}
